@@ -2,17 +2,16 @@
 
 require_once 'config.php';
 // Fetch all users
-$sql = "Select * from users";
+    $sql = "Select * from users";
 
-$result = $connect->query($sql);
+    $stmt = $connect->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-if(!$result){
-    die("Error fetching users: " . $connect->error);
-}else {
     $users = $result->fetch_all(MYSQLI_ASSOC);
     $result->free();
+    $stmt->close();
     $connect->close();
-}
 
 ?>
 

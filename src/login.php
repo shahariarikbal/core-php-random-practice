@@ -81,7 +81,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                     Sign In
                 </button>
                 <a href="index.php" class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">
-                    Do not have an account?
+                    Already have an account?
+                </a>
+                <a href="forgot-password.php" class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">
+                    Forgot Password?
                 </a>
             </div>
         </form>
